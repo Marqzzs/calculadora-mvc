@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Calculadora";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <input type="number" name="numero1" placeholder="Digite o primeiro número" required /><br />
+    <input type="number" name="numero2" placeholder="Digite o segundo número" required /><br />
+    <input type="submit" value="Somar" />
+</form>
+
+@if (ViewBag.Resultado != null)
+{
+    <h3>Resultado: @ViewBag.Resultado</h3>
+}
